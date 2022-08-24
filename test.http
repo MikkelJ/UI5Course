@@ -1,0 +1,6 @@
+
+### metadata v2
+GET http://localhost:4004/v2/school/$metadata
+
+### metadata v4 (default)
+GET http://localhost:4004/school/$metadata
