@@ -9,6 +9,17 @@
     },
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
+    "dataSources": {
+      "mainService": {
+          "uri": "/starwars/",
+          "type": "OData",
+          "settings": {
+              "annotations": [],
+              "localUri": "localService/metadata.xml",
+              "odataVersion": "4.0"
+          }
+      }
+  },
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap-ux/fiori-freestyle-writer:basic",
@@ -50,7 +61,17 @@
         "settings": {
           "bundleName": "com.myorg.myUI5App.i18n.i18n"
         }
-      }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+            "synchronizationMode": "None",
+            "operationMode": "Server",
+            "autoExpandSelect": true,
+            "earlyRequests": true
+        }
+    }
     },
     "resources": {
       "css": [
@@ -76,6 +97,13 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "RoutePeoples",
+          "pattern": "People({id})",
+          "target": [
+            "TargetPeoples"
+          ]
         }
       ],
       "targets": {
@@ -85,6 +113,12 @@
           "clearControlAggregation": false,
           "viewId": "MainView",
           "viewName": "MainView"
+        },
+        "TargetPeoples": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewId": "People",
+          "viewName": "People"
         }
       }
     },

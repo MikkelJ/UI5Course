@@ -1,0 +1,33 @@
+<mvc:View controllerName="com.myorg.myUI5App.controller.People" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+  <Page title="Plannet 1">
+    <Table itemPress="onOpenDialog" items="{people}">
+      <columns>
+        <Column >
+          <Label text="Name" />
+        </Column>
+        <Column >
+          <Label text="Age" />
+        </Column>
+        <Column >
+          <Label text="Haircolor" />
+        </Column>
+        <Column >
+          <Label text="Evil" />
+        </Column>
+        <Column >
+          <Label text="Origin Planet" />
+        </Column>
+      </columns>
+      <items>
+        <ColumnListItem type="Active">
+          <Input value="{name}" />
+          <Label text="{age}" />
+          <Label text="{haircolor}" />
+          <Label text="{evil}" />
+          <Label text="{planet/name}" />
+        </ColumnListItem>
+      </items>
+
+    </Table>
+  </Page>
+</mvc:View>
