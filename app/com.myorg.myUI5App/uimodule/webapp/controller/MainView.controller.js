@@ -13,7 +13,7 @@ sap.ui.define(
             onAfterRendering: function() {
               const oTable = this.byId("idTable");
 
-              oTable.setHeaderText("Hej med jer");
+              oTable.setHeaderText("Hej frederik");
             }
 
         });
