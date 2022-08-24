@@ -4,3 +4,9 @@ GET http://localhost:4004/v2/school/$metadata
 
 ### metadata v4 (default)
 GET http://localhost:4004/school/$metadata
+
+### Planets
+GET http://localhost:4004/starwars/PlanetSet
+
+### Planets
+GET http://localhost:4004/starwars/updateDB()

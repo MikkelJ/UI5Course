@@ -10,10 +10,13 @@ sap.ui.define(
             onInit: function () {
 
             },
-            onAfterRendering: function() {
-              const oTable = this.byId("idTable");
+            
+            onItemPress: function(oEvent) {
+                const oItem = oEvent.getSource();
 
-              oTable.setHeaderText("Hej frederik");
+                const iPlanetId = oItem.getBindingContext().getObject().ID;
+
+                this.navTo("RoutePeoples", {id: iPlanetId});
             }
 
         });
