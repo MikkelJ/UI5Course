@@ -10,3 +10,24 @@ GET http://localhost:4004/starwars/PlanetSet
 
 ### Planets
 GET http://localhost:4004/starwars/updateDB()
+
+
+
+
+
+### POST Lunch
+POST http://localhost:4004/lunchservice/LunchEntrySet
+Content-Type: application/json
+
+{
+    "date": "2022-10-25",
+    "office_ID": "9000",
+    "employee": "frederik.kok@nttdata.com"
+}
+
+### DELETE Lunch
+DELETE http://localhost:4004/lunchservice/LunchEntrySet(fddfe7ee-7ad1-42a1-8fb9-332f429b4238)
+
+
+### Read all Lunch
+GET http://localhost:4004/lunchservice/LunchEntrySet?$filter=employee eq 'mikkel.pierre.moller.jensen@nttdata.com'
